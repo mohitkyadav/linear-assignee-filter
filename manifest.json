@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Assignee Filter for Linear",
+  "version": "1.0.0",
+  "description": "Filter Linear cycles and issue lists by person in one click, with a tiny bar of team avatars.",
+  "permissions": ["storage"],
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Assignee Filter for Linear",
+    "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "content_scripts": [
+    { "matches": ["https://linear.app/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ]
+}
